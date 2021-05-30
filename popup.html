@@ -1,0 +1,175 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+<body>
+
+	<div class="main">
+		<div class="topPart">
+			<input id="wordInput" type="text">
+			<button class="btn" id="addButton"><i class="fa fa-plus"></i></button>
+			<button class="btn" id="clearButton"><i class="fa fa-trash"></i></button>
+		</div>
+		
+		<br>
+		
+		<div id="words"></div>
+		<div id="messages"></div>
+		<div id="hidden"></div>
+	</div>
+
+	<div id="notif">
+		<div class="content">
+			COPIED
+		</div>
+	</div>
+
+</body>
+
+<script src="main.js"></script>
+
+<style>
+	.main {
+		width: 300px;
+		height: 300px;
+		padding: 2px;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.logMessage {
+		color: red;
+	}
+
+	.topPart {
+		height: 60px;
+	}
+
+	#words {
+		overflow-y: auto;
+		height: 210px;
+		padding: 5px;
+	}
+
+	#hidden {
+		position: fixed;
+		margin: 99999999;
+	}
+
+	#notif {
+		background-color: rgb(88, 151, 88);
+		border-radius: 5%;
+		text-align: center;
+
+		visibility: hidden;
+		width: 100px;
+		position: fixed;
+		top: calc(50% - 25px);
+		left: calc(50% - 50px);
+	}
+
+	#notif.show {
+		visibility: visible;
+		-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+		animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	}
+
+	#notif div {
+		color: white;
+		padding: 10px;
+		font-size: large;
+	}
+
+	.btn {
+		border: none;
+		background-color: white;
+		width: 25px;
+		height: 25px;
+		margin-right: 2px;
+		font-size: 16px;
+		cursor: pointer;
+		border-radius: 50%;
+	}
+
+	.btn:hover {
+		filter: brightness(80%)
+	}
+
+	.btn:active {
+		filter: brightness(85%)
+	}
+
+	body {
+		border: 1px solid rgb(116, 116, 116);
+		margin: 1px;
+		padding: 2px;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+	}
+
+	input[type=text],
+	select {
+		width: 70%;
+		padding: 12px 10px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 2px;
+		box-sizing: border-box;
+	}
+
+	input[type=search] {
+		-webkit-appearance: none;
+	}
+
+	/* Animations to fade the snackbar in and out */
+	@-webkit-keyframes fadein {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadein {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	@-webkit-keyframes fadeout {
+		from {
+			opacity: 1;
+		}
+
+		to {
+			opacity: 0;
+		}
+	}
+
+	@keyframes fadeout {
+		from {
+			opacity: 1;
+		}
+
+		to {
+			opacity: 0;
+		}
+	}
+</style>
+
+</html>
