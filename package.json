@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@types/chrome": "^0.0.143",
+    "typescript": "^4.3.2"
+  },
+  "name": "clipboard-util",
+  "description": "A little extension that can store strings to be copied later.",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-build": "build.sh",
+    "dev-build-windows": "build.cmd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NilsRichard/Clipboard-Util.git"
+  },
+  "author": "Nils Richard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NilsRichard/Clipboard-Util/issues"
+  },
+  "homepage": "https://github.com/NilsRichard/Clipboard-Util#readme"
+}

@@ -95,9 +95,9 @@ function loadWords() {
 
 
 function addElement() {
-    const input = document.getElementById('wordInput')
+    const input  = document.getElementById('wordInput') as HTMLInputElement 
 
-    if (input.value) {
+    if (input) {
         addWord(input.value)
         input.value = ""
     }
